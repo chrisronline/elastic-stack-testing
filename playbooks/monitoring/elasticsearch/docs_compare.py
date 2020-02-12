@@ -3,7 +3,6 @@ Usage:
   python docs_compare.py /path/to/internal/docs /path/to/metricbeat/docs
 '''
 from docs_compare_util import check_parity
-import sys
 
 def handle_special_case_index_recovery(internal_doc, metricbeat_doc):
     # Normalize `index_recovery.shards` array field to have only one object in it.
