@@ -70,7 +70,6 @@ def handle_special_case_cluster_stats(internal_doc, metricbeat_doc):
         for field_type in metricbeat_doc["cluster_stats"]["indices"]["mappings"]["field_types"]:
           if field_type["name"] == internal_field_type_name:
             found = True
-            sys.stdout.write("Found: " + str(field_type) + "\n")
         
         if (not found):
           internal_contains_all_in_metricbeat = False
